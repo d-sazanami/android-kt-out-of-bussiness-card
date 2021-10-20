@@ -6,112 +6,86 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <EditText
-        android:id="@+id/companyEdit"
-        android:layout_width="320dp"
+    <TextView
+        android:id="@+id/companyText"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:hint="@string/company_hint"
-        android:inputType="text"
+        android:layout_marginLeft="68dp"
+        android:layout_marginTop="156dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="company" />
 
-    <EditText
-        android:id="@+id/postalEdit"
-        android:layout_width="146dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:ems="10"
-        android:hint="@string/postal_hint"
-        android:inputType="number"
-        app:layout_constraintStart_toStartOf="@+id/companyEdit"
-        app:layout_constraintTop_toBottomOf="@+id/companyEdit" />
-
-    <EditText
-        android:id="@+id/telEdit"
+    <TextView
+        android:id="@+id/postalText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:ems="10"
-        android:hint="@string/tel_hint"
-        android:inputType="phone"
-        app:layout_constraintStart_toStartOf="@+id/companyEdit"
-        app:layout_constraintTop_toBottomOf="@+id/postalEdit" />
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintStart_toStartOf="@+id/companyText"
+        app:layout_constraintTop_toBottomOf="@+id/companyText" />
 
-    <EditText
-        android:id="@+id/faxEdit"
+    <TextView
+        android:id="@+id/addressText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:ems="10"
-        android:hint="@string/fax_hint"
-        android:inputType="phone"
-        app:layout_constraintStart_toStartOf="@+id/telEdit"
-        app:layout_constraintTop_toBottomOf="@+id/telEdit" />
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintStart_toStartOf="@+id/postalText"
+        app:layout_constraintTop_toBottomOf="@+id/postalText" />
 
-    <EditText
-        android:id="@+id/emailEdit"
+    <TextView
+        android:id="@+id/telText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:ems="10"
-        android:hint="@string/email_hint"
-        android:inputType="textEmailAddress"
-        app:layout_constraintStart_toStartOf="@+id/faxEdit"
-        app:layout_constraintTop_toBottomOf="@+id/faxEdit" />
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintStart_toStartOf="@+id/addressText"
+        app:layout_constraintTop_toBottomOf="@+id/addressText" />
 
-    <EditText
-        android:id="@+id/urlEdit"
+    <TextView
+        android:id="@+id/faxText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:ems="10"
-        android:hint="@string/url_hint"
-        android:inputType="textUri"
-        app:layout_constraintStart_toStartOf="@+id/companyEdit"
-        app:layout_constraintTop_toBottomOf="@+id/emailEdit" />
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintStart_toStartOf="@+id/telText"
+        app:layout_constraintTop_toBottomOf="@+id/telText" />
 
-    <EditText
-        android:id="@+id/positionEdit"
+    <TextView
+        android:id="@+id/emailText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:ems="10"
-        android:hint="@string/position_hint"
-        android:inputType="text"
-        app:layout_constraintStart_toStartOf="@+id/urlEdit"
-        app:layout_constraintTop_toBottomOf="@+id/urlEdit" />
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintStart_toStartOf="@+id/faxText"
+        app:layout_constraintTop_toBottomOf="@+id/faxText" />
 
-    <EditText
-        android:id="@+id/nameEdit"
+    <TextView
+        android:id="@+id/urlText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:ems="10"
-        android:hint="@string/name_hint"
-        android:inputType="textPersonName"
-        app:layout_constraintStart_toStartOf="@+id/positionEdit"
-        app:layout_constraintTop_toBottomOf="@+id/positionEdit" />
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintStart_toStartOf="@+id/emailText"
+        app:layout_constraintTop_toBottomOf="@+id/emailText" />
 
-    <Button
-        android:id="@+id/saveBtn"
+    <TextView
+        android:id="@+id/nameText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="@string/save_text"
-        app:layout_constraintStart_toStartOf="@+id/nameEdit"
-        app:layout_constraintTop_toBottomOf="@+id/nameEdit" />
+        android:layout_marginLeft="232dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintStart_toStartOf="@+id/companyText"
+        app:layout_constraintTop_toBottomOf="@+id/companyText" />
 
-    <Button
-        android:id="@+id/cancelBtn"
+    <TextView
+        android:id="@+id/positionText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
-        android:text="@string/cancel_text"
-        app:layout_constraintStart_toEndOf="@+id/saveBtn"
-        app:layout_constraintTop_toTopOf="@+id/saveBtn" />
+        android:layout_marginBottom="8dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintBottom_toTopOf="@+id/nameText"
+        app:layout_constraintStart_toStartOf="@+id/nameText" />
 </androidx.constraintlayout.widget.ConstraintLayout>
