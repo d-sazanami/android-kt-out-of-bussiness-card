@@ -8,7 +8,7 @@ import com.example.sazanami.outofbusinesscards.databinding.ActivityEditBinding
 
 class EditActivity : AppCompatActivity() {
 
-    private val sharedPreferenceName = "BussinessCard"
+    private val sharedPreferenceName = "BusinessCard"
 
     private lateinit var binding: ActivityEditBinding
 
