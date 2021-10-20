@@ -39,12 +39,12 @@ class EditActivity : AppCompatActivity() {
         binding.positionEdit.setText(position)
         binding.nameEdit.setText(name)
 
-        binding.saveBtn.setOnClickListener() {
+        binding.saveBtn.setOnClickListener {
             saveData()
             finish()
         }
 
-        binding.cancelBtn.setOnClickListener() {
+        binding.cancelBtn.setOnClickListener {
             finish()
         }
     }
