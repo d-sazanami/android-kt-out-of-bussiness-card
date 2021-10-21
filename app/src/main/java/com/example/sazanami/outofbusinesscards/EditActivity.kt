@@ -8,8 +8,6 @@ import com.example.sazanami.outofbusinesscards.databinding.ActivityEditBinding
 
 class EditActivity : AppCompatActivity() {
 
-    private val sharedPreferenceName = "BusinessCard"
-
     private lateinit var binding: ActivityEditBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,7 +16,10 @@ class EditActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
-        val pref: SharedPreferences = getSharedPreferences(sharedPreferenceName, Context.MODE_PRIVATE)
+        val pref: SharedPreferences = getSharedPreferences(
+            Common.sharedPreferenceName,
+            Context.MODE_PRIVATE
+        )
         val company = pref.getString("company", "")
         val postal = pref.getString("postal", "")
         val address= pref.getString("address", "")
@@ -50,7 +51,7 @@ class EditActivity : AppCompatActivity() {
     }
 
     private fun saveData() {
-        val pref = getSharedPreferences(sharedPreferenceName, Context.MODE_PRIVATE)
+        val pref = getSharedPreferences(Common.sharedPreferenceName, Context.MODE_PRIVATE)
         val editor = pref.edit()
         editor.putString("company", binding.companyEdit.text.toString())
             .putString("postal", binding.postalEdit.text.toString())
